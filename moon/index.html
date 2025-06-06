@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Scrolling</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <a href="#" class="logo">logo</a>
+            <ul>
+                <li><a href="#" class="active ">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h1 id="text">Moon Light</h1>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+
+        <div class="sec" id="sec">
+            <h2>
+                About Moonlight
+            </h2>
+            <p>
+                The moon, Earth’s only natural satellite, has captivated humanity for millennia with its serene glow and ever-changing phases. It is believed to have formed around 4.5 billion years ago, likely from the debris of a massive collision between Earth and a Mars-sized object named Theia. Orbiting at an average distance of 384,400 kilometers, the moon plays a vital role in our planet’s ecosystem. Its gravitational pull creates tides, which are crucial for marine life and have shaped the evolution of coastal habitats. Additionally, the moon stabilizes Earth’s axial tilt, ensuring consistent seasons over millennia. The lunar surface is a testament to cosmic history, marked by craters from asteroid impacts, vast plains, and towering mountains. Without an atmosphere to protect it, the moon’s landscape remains unchanged, a silent witness to billions of years of cosmic activity. <br><br>Its cultural significance is just as profound; across civilizations, the moon has been a symbol of time, romance, and spirituality. From ancient myths portraying it as a deity to its role in lunar calendars, it has guided human traditions and rituals. The moon also stands as a beacon of scientific curiosity and exploration. In 1969, NASA’s Apollo 11 mission made history as Neil Armstrong and Buzz Aldrin became the first humans to set foot on its surface, leaving behind footprints that will remain for millions of years. Today, the moon continues to inspire as scientists plan for future missions, exploring the potential for sustainable human presence on its surface. Whether viewed through the lens of science or poetry, the moon remains a constant source of wonder, connecting us to the vastness of the cosmos and reminding us of our shared connection to the universe.                
+                <br><br>
+                The moon, Earth’s closest celestial neighbor, has long been a source of wonder, mystery, and scientific intrigue. Orbiting at an average distance of 384,400 kilometers, it is a silent companion, influencing life on Earth in profound ways. The moon’s gravitational pull controls the tides, creating the rhythmic ebb and flow of the oceans that have shaped ecosystems and human activity for millennia. Believed to have formed around 4.5 billion years ago, the moon is thought to be the result of a colossal collision between Earth and a Mars-sized object named Theia, leaving behind a fragment that became our constant satellite. Its surface, a breathtaking mosaic of craters, valleys, and ancient volcanic plains, is a geological record of cosmic history, untouched by erosion due to its lack of atmosphere. This same barrenness allows for pristine views of the cosmos, making the moon an ideal location for future space exploration and astronomy. Beyond its physical attributes, the moon holds deep cultural and symbolic significance. 
+                <br><br>
+                From being revered as a goddess in ancient myths to inspiring art, poetry, and music, the moon is woven into the fabric of human creativity. It also serves as a scientific beacon, representing humanity’s ingenuity and curiosity. The Apollo 11 mission in 1969 marked a milestone in human achievement as Neil Armstrong and Buzz Aldrin walked on its surface, etching their names into history. Today, as humanity dreams of establishing lunar bases and using the moon as a gateway to explore deeper into the solar system, it continues to be a symbol of ambition and unity. The moon’s phases, its subtle glow, and its role in shaping the natural rhythms of Earth make it a timeless muse and an enduring scientific frontier. Whether as a source of light in the darkness or a reminder of humanity's cosmic aspirations, the moon remains a testament to the beauty and mystery of the universe.
+            </p>
+           
+            
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll',function(){
+                let value = window.scrollY;
+                stars.style.left = value *0.25 + 'px';
+                moon.style.top = value *1.05 + 'px';
+                mountains_behind.style.top = value *0.5 + 'px';
+                mountains_front.style.top = value *0 + 'px';
+                text.style.marginRight = value *4 + 'px';
+                text.style.marginTop = value *1.5 + 'px';
+                btn.style.marginTop = value *1.5 + 'px';
+                header.style.marginTop = value *0.5 + 'px';
+
+
+            })
+        </script>
+
+
+    </body>
+
+    <footer>
+        © 2025 Moonlight. All Rights Reserved.<br><br>
+        <a href="" >Policy | Terms of Service | FAQ </a>
+    </footer>
+</html>
